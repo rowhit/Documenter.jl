@@ -16,9 +16,9 @@ makedocs(
             "man/examples.md",
             "man/syntax.md",
             "man/doctests.md",
-            "man/hosting.md",
             "man/latex.md",
-            "man/contributing.md",
+            "man/hosting.md",
+            "man/other_formats.md",
         ],
         "Library" => Any[
             "Public" => "lib/public.md",
@@ -41,7 +41,8 @@ makedocs(
                 "lib/internals/utilities.md",
                 "lib/internals/writers.md",
             ])
-        ]
+        ],
+        "contributing.md",
     ],
     # Use clean URLs, unless built as a "local" build
     html_prettyurls = !("local" in ARGS),

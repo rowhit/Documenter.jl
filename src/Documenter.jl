@@ -166,8 +166,8 @@ These can be enabled using the `format` keyword and they generally require addit
 keywords be defined, depending on the format. These keywords are also currently considered
 experimental.
 
-**`format`** allows the output format to be specified. Possible values are `:html`, `:latex`
-and `:markdown` (default).
+**`format`** allows the output format to be specified. Possible values are `:html` (default),
+`:latex` and `:markdown`.
 
 Other keywords related to non-MkDocs builds (**`assets`**, **`sitename`**, **`analytics`**,
 **`authors`**, **`pages`**, **`version`**) should be documented at the respective `*Writer`
