@@ -69,6 +69,33 @@ This is only a basic skeleton. Read through the MkDocs documentation if you woul
 know more about the available settings.
 
 
+### Deployment with MkDocs
+
+To deploy MkDocs on Travis, you also need to provide additional keyword arguments to
+[`deploydocs`](@ref). Your [`deploydocs`](@ref) call should look something like
+
+```julia
+deploydocs(
+    repo   = "github.com/USER_NAME/PACKAGE_NAME.jl.git",
+    deps   = Deps.pip("mkdocs", "pygments", "python-markdown-math"),
+    make   = () -> run(`mkdocs build`)
+    target = "site"
+)
+```
+
+* `deps` serves to provide the required Python dependencies to build the documentation
+* `make` specifies the function that calls `mkdocs` to perform the second build step
+* `target`, which specified which files get copied to `gh-pages`, needs to point to the
+  `site/` directory
+
+In the example above we include the dependencies [mkdocs](https://www.mkdocs.org)
+and [`python-markdown-math`](https://github.com/mitya57/python-markdown-math).
+The former makes sure that MkDocs is installed to deploy the documentation,
+and the latter provides the `mdx_math` markdown extension to exploit MathJax
+rendering of latex equations in markdown. Other dependencies should be
+included here.
+
+
 ### ``\LaTeX``: MkDocs and MathJax
 
 To get MkDocs to display ``\LaTeX`` equations correctly we need to update several of this

@@ -3,7 +3,6 @@ using Documenter, DocumenterTools
 makedocs(
     modules = [Documenter, DocumenterTools],
     clean = false,
-    format = :html,
     assets = ["assets/favicon.ico"],
     sitename = "Documenter.jl",
     authors = "Michael Hatherly, Morten Piibeleht, and contributors.",
@@ -18,7 +17,7 @@ makedocs(
             "man/doctests.md",
             "man/latex.md",
             "man/hosting.md",
-            "man/other_formats.md",
+            "man/other-formats.md",
         ],
         "Library" => Any[
             "Public" => "lib/public.md",
@@ -52,6 +51,4 @@ makedocs(
 deploydocs(
     repo = "github.com/JuliaDocs/Documenter.jl.git",
     target = "build",
-    deps = nothing,
-    make = nothing,
 )

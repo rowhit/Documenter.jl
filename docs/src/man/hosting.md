@@ -162,23 +162,6 @@ where `USER_NAME` and `PACKAGE_NAME` must be set to the appropriate names.
 Note that `repo` should not specify any protocol, i.e. it should not begin with `https://`
 or `git@`.
 
-The keyword `deps` serves to provide the required dependencies to deploy
-the documentation:
-
-```julia
-deploydocs(
-    deps   = Deps.pip("mkdocs", "python-markdown-math"),
-    repo   = "github.com/USER_NAME/PACKAGE_NAME.jl.git",
-)
-```
-
-In the example above we include the dependencies [mkdocs](https://www.mkdocs.org)
-and [`python-markdown-math`](https://github.com/mitya57/python-markdown-math).
-The former makes sure that MkDocs is installed to deploy the documentation,
-and the latter provides the `mdx_math` markdown extension to exploit MathJax
-rendering of latex equations in markdown. Other dependencies should be
-included here.
-
 See the [`deploydocs`](@ref) function documentation for more details.
 
 
@@ -215,7 +198,7 @@ When documentation is generated it is stored in one of the following folders:
 
 Unless a custom domain is being used, the `stable` and `latest` pages are found at:
 
-```markdown
+```
 https://USER_NAME.github.io/PACKAGE_NAME.jl/stable
 https://USER_NAME.github.io/PACKAGE_NAME.jl/latest
 ```
@@ -233,7 +216,7 @@ that is necessary:
 
 `PACKAGE_NAME` and `USER_NAME` should be replaced with their appropriate values. The colour
 and text of the image can be changed by altering `docs-stable-blue` as described on
-[shields.io](http://shields.io), though it is recommended that package authors follow this
+[shields.io](https://shields.io), though it is recommended that package authors follow this
 standard to make it easier for potential users to find documentation links across multiple
 package README files.
 
