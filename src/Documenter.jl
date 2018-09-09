@@ -159,19 +159,26 @@ ignored.
 **`strict`** -- [`makedocs`](@ref) fails the build right before rendering if it encountered
 any errors with the document in the previous build phases.
 
-## Non-MkDocs builds
-
-Documenter also has (experimental) support for native HTML and LaTeX builds.
-These can be enabled using the `format` keyword and they generally require additional
-keywords be defined, depending on the format. These keywords are also currently considered
-experimental.
+## Output formats
 
 **`format`** allows the output format to be specified. Possible values are `:html` (default),
 `:latex` and `:markdown`.
 
-Other keywords related to non-MkDocs builds (**`assets`**, **`sitename`**, **`analytics`**,
-**`authors`**, **`pages`**, **`version`**) should be documented at the respective `*Writer`
-modules ([`Writers.HTMLWriter`](@ref), [`Writers.LaTeXWriter`](@ref)).
+Documenter is designed to support multiple output formats. By default it is creates a set of
+HTML files, but the output format can be controlled with the `format` keyword.
+
+The different output formats may require additional keywords to be specified. The keywords
+for the default HTML output are documented at the [`HTMLWriter`](@ref) module.
+
+Documenter also has (experimental) support for Markdown and LaTeX / PDF outputs. These are
+documenter in their respective writer modules: [`MarkdownWriter`](@ref) and
+[`LaTeXWriter`](@ref).
+
+!!! warning
+
+    The Markdown and LaTeX output formats will be moved to a separate package in future
+    versions of Documenter. Automatic documentation deployments should not rely on it unless
+    they fix Documenter to a minor version.
 
 # See Also
 
