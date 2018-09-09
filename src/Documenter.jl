@@ -165,14 +165,12 @@ any errors with the document in the previous build phases.
 `:latex` and `:markdown`.
 
 Documenter is designed to support multiple output formats. By default it is creates a set of
-HTML files, but the output format can be controlled with the `format` keyword.
+HTML files, but the output format can be controlled with the `format` keyword. The different
+output formats may require additional keywords to be specified. The keywords for the default
+HTML output are documented at the [`Writers.HTMLWriter`](@ref) module.
 
-The different output formats may require additional keywords to be specified. The keywords
-for the default HTML output are documented at the [`HTMLWriter`](@ref) module.
-
-Documenter also has (experimental) support for Markdown and LaTeX / PDF outputs. These are
-documenter in their respective writer modules: [`MarkdownWriter`](@ref) and
-[`LaTeXWriter`](@ref).
+Documenter also has (experimental) support for Markdown and LaTeX / PDF outputs. See the
+[Other outputs](@ref) for more information.
 
 !!! warning
 

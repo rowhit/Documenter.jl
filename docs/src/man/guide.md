@@ -137,10 +137,9 @@ build/
     See the [Hosting Documentation](@ref) section for details regarding how you should go
     about setting this up correctly.
 
-At the moment `build/index.md` should be empty since `src/index.md` is empty.
-
-At this point you can add some text to `src/index.md` and rerun the `make.jl` file to see
-the changes if you'd like to.
+At this point `build/index.html` should be an empty page since `src/index.md` is empty. You
+can try adding some text to `src/index.md` and re-running the `make.jl` file to see the
+changes.
 
 ### Adding some docstrings
 

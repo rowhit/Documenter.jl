@@ -15,7 +15,7 @@ work fine with some amount of setting up.
 !!! note
 
     Markdown output used to be the default option (i.e. when leaving the `format` option
-    unspecified).
+    unspecified). The default now is the HTML output.
 
 !!! warning
 
@@ -152,6 +152,9 @@ documentation.
   highlighter [Pygments](http://pygments.org/) installed.
 * You need the [Lato](http://www.latofonts.com/lato-free-fonts/) and
   [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono) fonts installed.
+
+You should also specify the `sitename` and `authors` keywords for `makedocs` when using the
+LaTeX output.
 
 !!! warning
 

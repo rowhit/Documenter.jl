@@ -9,7 +9,7 @@ A module for rendering `Document` objects to LaTeX and PDF.
 **`sitename`** is the site's title displayed in the title bar and at the top of the
 navigation menu. It goes into the `\\title` LaTeX command.
 
-**authors** can be used to specify the authors of. It goes into the `\\author` LaTeX command.
+**`authors`** can be used to specify the authors of. It goes into the `\\author` LaTeX command.
 
 """
 module LaTeXWriter
